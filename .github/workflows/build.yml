@@ -17,3 +17,8 @@ jobs:
           cache: gradle
       - run: chmod +x gradlew
       - run: ./gradlew build
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: /app/build/outputs/apk
